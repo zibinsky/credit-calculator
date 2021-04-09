@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- FONTS -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+   <!-- STYLES -->
+   <link rel="stylesheet" href="normalize.css">
+   <link rel="stylesheet" href="style.css">
+   <title>Credit Calculator</title>
+</head>
+
+<body>
+
+   <div class="wrapper">
+      <!-- wrapper-left -->
+      <div class="wrapper-left">
+         <div class="wrapper-left__header">
+            Кредит наличными
+         </div>
+         <div class="wrapper-left__content">
+            <form class="form-checkbox">
+               <label for="checkbox" id="checkbox-label">
+                  <input type="checkbox" name="checkbox" id="checkbox">
+                  <span class="checkbox-wrapper"></span>
+                  <span class="checkbox-text">Я получаю зарплату на карту</span>
+               </label>
+            </form>
+
+            <form class="form-inputs">
+               <div class="form-input__sum">
+                  <p class="form-inputs__title">Сумма кредита, &#8381;</p>
+                  <div class="credit-sum">
+                     <span class="minus" id="minus-sum">&mdash;</span>
+                     <input type="text" class="credit-sum__field" id="credit-sum__field" value="500000">
+                     <span class="plus" id="plus-sum">+</span>
+                  </div>
+                  <p class="form-inputs__subtitle">От 50 000 до 3 000 000 рублей</p>
+               </div>
+               <div class="form-input__term">
+                  <p class="form-inputs__title">Срок, мес.</p>
+                  <div class="credit-term">
+                     <span class="minus" id="minus-term">&mdash;</span>
+                     <input type="text" class="credit-sum__field" id="credit-term__field" value="12">
+                     <span class="plus" id="plus-term">+</span>
+                  </div>
+                  <p class="form-inputs__subtitle">От 12 до 60 месяцев</p>
+               </div>
+            </form>
+
+            <button class="btn btn-blue" type="submit" id="btn-count">Рассчитать</button>
+         </div>
+      </div>
+
+      <!-- wrapper-right -->
+      <div class="wrapper-right">
+         <div class="wrapper-right__header">
+            Рассчитайте кредит онлайн
+         </div>
+         <div class="wrapper-right__content">
+            <div class="wrapper-right__content--wrapper">
+               <div class="monthly-payment">
+                  <p>Ежемесячный платеж, &#8381;</p>
+                  <div class="monthly-payment__field">
+                     44625
+                  </div>
+               </div>
+               <div class="credit-percent">
+                  <p>Ставка кредитования</p>
+                  <div class="credit-percent__field">
+                     7.9 
+                  </div>
+               </div>
+               <button class="btn btn-red" type="submit" id="btn-request">Оформить заявку</button>
+            </div>
+         </div>
+      </div>
+
+      <!-- modal-window -->
+      <div class="modal-window">
+         <div class="modal-window__overlay">
+            <div class="modal-window__wrapper">
+               <h2>Заявка на выдачу кредита</h2>
+               <form id="form-modal">
+                  <div class="modal-sum__credit">
+                     <div class="modal-sum__credit--text">Сумма кредита:</div>
+                     <div class="modal-sum__credit--num"></div>
+                  </div>
+                  <div class="modal-term__credit">
+                     <div class="modal-term__credit--text">Срок кредита:</div>
+                     <div class="modal-term__credit--num"></div>
+                  </div>
+                  <input type="text" placeholder="Ваше ФИО">
+                  <input type="text" placeholder="Ваш email">
+                  <input type="text" placeholder="Ваш телефон">
+                  <button type="submit" class="btn btn-red" id="btn-submit">Отправить заявку</button>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <!-- modal thanks -->
+      <div class="modal-thanks">
+         <h2>Спасибо за вашу заявку!</h2>
+         <h3>Наш специалист свяжется с вами.</h3>
+      </div>
+
+   </div>
+
+   <!-- SCRIPTS -->
+   <script src="app.js"></script>
+</body>
+
+</html>
